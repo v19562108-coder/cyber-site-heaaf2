@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выгул Драконов</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ffcccb, #ff9999);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background: linear-gradient(to right, #ff7f50, #ffc107);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .block {
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 20px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .dragon img {
+            width: 100%;
+            border-radius: 16px;
+        }
+        .description {
+            margin-top: 10px;
+        }
+        .petBtn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 50px;
+            background: #ff4757;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.4);
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Выгул Драконов</h1>
+    </header>
+    <div class="block">
+        <div class="dragon">
+            <img src="https://via.placeholder.com/200" alt="Дракон">
+            <div class="description">Летающий дракон, идеальный друг для приключений.</div>
+            <div style="font-size:4em; margin:10px 0;">🐉</div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="dragon">
+            <img src="https://via.placeholder.com/200" alt="Дракон">
+            <div class="description">Дракон-фотомодель, всегда готов к съемкам.</div>
+            <div style="font-size:4em; margin:10px 0;">🐉</div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="dragon">
+            <img src="https://via.placeholder.com/200" alt="Дракон">
+            <div class="description">Спокойный дракон, любит прогулки по парку.</div>
+            <div style="font-size:4em; margin:10px 0;">🐉</div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="dragon">
+            <img src="https://via.placeholder.com/200" alt="Дракон">
+            <div class="description">Большой дракон, требует много внимания.</div>
+            <div style="font-size:4em; margin:10px 0;">🐉</div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2023 Выгул Драконов. Все права защищены.</p>
+    </footer>
+    <button id="petBtn" onclick="petDragon()">Погладить дракона 🐉</button>
+    <script>
+        const btn = document.getElementById('petBtn');
+        btn.addEventListener('mouseover', () => {
+            const maxX = window.innerWidth - btn.offsetWidth;
+            const maxY = window.innerHeight - btn.offsetHeight;
+            btn.style.left = Math.floor(Math.random() * maxX) + 'px';
+            btn.style.top = Math.floor(Math.random() * maxY) + 'px';
+            btn.style.right = 'auto';
+            btn.style.bottom = 'auto';
+        });
+    </script>
+</body>
+</html>
